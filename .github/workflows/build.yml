@@ -29,7 +29,7 @@ jobs:
 
       - name: Run Tests with Code Coverage
         run: |
-          OpenCppCoverage.exe --sources src --export_type cobertura:coverage.xml --cover_children -- ctest.exe --test-dir build -C Debug --output-on-failure
+          & "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --sources src --export_type cobertura:coverage.xml --cover_children -- ctest.exe --test-dir build -C Debug --output-on-failure
 
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v5
